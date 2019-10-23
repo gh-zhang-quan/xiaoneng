@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/re_father"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/xn_bg_color"
+    android:clickable="true" >
+
+    <RelativeLayout
+        android:id="@+id/sdk_chat_top"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/xn_leave_head_bg" >
+
+        <TextView
+            android:id="@+id/tv_leave_msg_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/xn_leave_message"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/xn_white"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:id="@+id/sdt_chat_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" >
+
+            <TextView
+                android:id="@+id/tv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/sdk_chat_finsh"
+                android:text="@string/xn_toast_cancel"
+                android:textColor="@color/xn_white"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/sdk_chat_finsh"
+                android:layout_width="24dp"
+                android:layout_height="34dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/chat_headback" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/sdk_leave_finish"
+            android:layout_width="62dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:text="@string/xn_submit"
+            android:textColor="@color/xn_white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/sdk_chat_top"
+        android:background="@color/xn_centercontent"
+        android:orientation="vertical"
+        android:overScrollMode="always" >
+
+        <LinearLayout
+            android:id="@+id/ll_leave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sdk_chat_top"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="3dp" >
+
+            <TextView
+                android:id="@+id/tv_leavemsgBoard"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sdk_chat_top"
+                android:layout_margin="6dp"
+                android:layout_marginTop="8dp"
+                android:padding="3dp"
+                android:minLines="3"
+                android:gravity="center_vertical"
+                android:textColor="@color/xn_black"
+                android:textSize="14sp" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/tv_leavemsg"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/sdk_chat_top"
+                android:layout_margin="6dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_selector"
+                android:padding="3dp"
+                android:textSize="14dp"
+                android:textColor="@color/xn_black"
+            android:textColorHint="@color/xn_sdk_hint"  >
+            </EditText>
+
+            <EditText
+                android:id="@+id/tv_name"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_margin="6dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/edittext_selector"
+                android:padding="3dp"
+                 android:textSize="14dp"
+                android:textColor="@color/xn_black"
+                 android:textColorHint="@color/xn_sdk_hint"  />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/tv_phone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="6dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/edittext_selector"
+                    android:padding="3dp"
+                     android:textSize="14dp"
+                    android:textColor="@color/xn_black"
+                    android:textColorHint="@color/xn_sdk_hint"  />
+
+                <EditText
+                    android:id="@+id/tv_email"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/sdk_chat_top"
+                    android:layout_margin="6dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/edittext_selector"
+                    android:padding="3dp"
+                     android:textSize="14dp"
+                    android:textColor="@color/xn_black"
+                    android:textColorHint="@color/xn_sdk_hint" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

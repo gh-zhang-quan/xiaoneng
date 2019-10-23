@@ -1,0 +1,36 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+
+    }
+
+    buildTypes {
+        lintOptions {
+            matchingFallbacks = ['debug']
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    api 'com.android.support:appcompat-v7:28.0.0'
+    api files('libs/hawtbuf-1.11.jar')
+    api files('libs/hawtdispatch-1.22.jar')
+    api files('libs/hawtdispatch-transport-1.22.jar')
+    api files('libs/HwPush_SDK.jar')
+    api files('libs/MiPush_SDK_Client_3_0_3.jar')
+    api files('libs/mqtt-client-1.14.jar')
+    api files('libs/xiaonengchatcore.jar')
+    api files('libs/xiaonengchatui.jar')
+    api files('libs/xiaonengnetwork.jar')
+    api files('libs/xiaonengutil.jar')
+    api files('libs/xiaonengv4.jar')
+    api files('libs/xiaonengxpush.jar')
+}
